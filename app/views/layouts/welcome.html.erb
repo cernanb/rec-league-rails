@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <%= javascript_include_tag 'application' %>
-    <%= stylesheet_link_tag    'application' %>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-    </head>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
     
     <body>
-    <%= render "layouts/navbar" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <div class="container">
     <%= yield %>
-    </div>
   </body>
 </html>
