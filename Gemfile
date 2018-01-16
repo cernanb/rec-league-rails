@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem "bulma-rails", "~> 0.6.2"
+gem 'pry'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
