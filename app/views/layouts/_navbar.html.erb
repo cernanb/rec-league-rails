@@ -1,8 +1,8 @@
-<header class="navbar">
+<header class="navbar <%= 'is-success' if action_name == 'welcome' %>">
   <div class="container">
     <div class="navbar-brand">
       <a href="/" class="navbar-item">
-        <i class="fas fa-bolt"></i>
+        <i class="fas fa-bolt fa-3x"></i>
       </a>
       <span class="navbar-burger burger" data-target="navbarMenuHeroC">
         <span></span>
@@ -12,27 +12,33 @@
     </div>
     <div id="navbarMenuHeroC" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item">
+        <a class="navbar-item" href="/" style="text-decoration: none;">
           Home
         </a>
-        <a href="/users/sign_up" class="navbar-item" style="text-decoration:none;">
-          Sign Up
-        </a>
+        <%= link_to "Sign Up", new_user_registration_path, class: "navbar-item", style: "text-decoration: none;" %>
         <a class="navbar-item">
           Examples
         </a>
         <a class="navbar-item">
           Documentation
         </a>
-        <span class="navbar-item">
-          <a class="button is-success is-inverted">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-            <span>Download</span>
-          </a>
-        </span>
       </div>
     </div>
   </div>
 </header>
+
+<script type="text/javascript">
+    var burger = document.querySelector('.burger')
+    burger.addEventListener ("click", toggleNav);
+    function toggleNav() {
+      var nav = document.querySelector(".navbar-menu");
+      var className = nav.getAttribute("class");
+      if(className == "navbar-menu") {
+        nav.className = "navbar-menu is-active";
+        burger.classList.add('is-active')
+      } else {
+        nav.className = "navbar-menu";
+        burger.classList.remove('is-active')
+      }
+    }
+</script>
