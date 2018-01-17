@@ -14,7 +14,7 @@
     <%= render "layouts/navbar" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <div class="<%= 'container' unless action_name == 'welcome' %>">
+    <div class="<%= 'container' unless action_name == 'welcome' %> has-text-centered">
       <%= yield %>
     </div>
   </body>
