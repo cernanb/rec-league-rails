@@ -1,0 +1,17 @@
+<h1>Receiving</h1>
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Yards</th>
+</tr>
+</thead>
+<tbody>
+<% receivers.each do |receiver| %>
+  <tr>
+    <td><%= receiver.full_name %></td>
+    <td><%= receiver.total_rec_yards %></td>
+  </tr>  
+<% end %>
+</tbody>
+</table>

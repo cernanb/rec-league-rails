@@ -1,0 +1,17 @@
+<h1>Rushing</h1>
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Yards</th>
+</tr>
+</thead>
+<tbody>
+<% rushers.each do |rusher| %>
+  <tr>
+    <td><%= rusher.full_name %></td>
+    <td><%= rusher.total_rush_yards %></td>
+  </tr>  
+<% end %>
+</tbody>
+</table>
