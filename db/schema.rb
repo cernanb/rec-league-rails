@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20180120021630) do
   end
 
   create_table "stats", force: :cascade do |t|
-    t.string "type"
+    t.string "stat_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
