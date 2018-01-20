@@ -29,6 +29,7 @@
           </div>
         </div>
         <% if user_signed_in? %>
+        <%= link_to "Stat Leaders", leaders_path, class: "navbar-item", style: "text-decoration: none;" %>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             My Teams
