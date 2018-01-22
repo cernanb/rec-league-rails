@@ -1,5 +1,33 @@
 <h1 class="title is-1"><%= @team.name %></h1>
 
-<% @team.players.each do |player| %>
-  <p><%=  "#{player.first_name} #{player.last_name}" %>
-<% end %>
+<div class="columns">
+<div class="card column">
+  <h2 class="title is-2">Players</h2>
+  <% @team.players.each do |player| %>
+    <p><%=  "#{player.first_name} #{player.last_name}" %>
+  <% end %>
+</div>
+
+<div class="card column">
+  <h2 class="title is-2">Seasons</h2>
+  <% @team.seasons.each do |season| %>
+    <p><%=  link_to season.start_date.strftime("%Y") %>
+  <% end %>
+</div>
+</div>
+
+
+<div class="columns">
+  <div class="column">
+    First column
+  </div>
+  <div class="column">
+    Second column
+  </div>
+  <div class="column">
+    Third column
+  </div>
+  <div class="column">
+    Fourth column
+  </div>
+</div>
