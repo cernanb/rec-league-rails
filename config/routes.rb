@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :teams, only: [:show] do 
     resources :seasons, only: [:show]
   end
+
+  resources :leagues, only: [:new, :create, :show] do
+    resources :matches, only: [:new]
+  end
   
   resources :users, only: [:show]
   root "pages#welcome"
