@@ -11,7 +11,7 @@
 <div class="card column">
   <h2 class="title is-2">Seasons</h2>
   <% @team.seasons.each do |season| %>
-    <p><%=  link_to season.start_date.strftime("%Y") %>
+    <p><%=  link_to season.start_date.strftime("%Y"), team_season_path(@team, season) %>
   <% end %>
 </div>
 </div>
