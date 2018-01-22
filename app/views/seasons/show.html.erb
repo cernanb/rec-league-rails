@@ -3,3 +3,6 @@ for
 <%= @team.name %>
 
 <h1>Games</h1>
+<% @games.each.with_index(1) do |game, i| %>
+  <p>Game <%= i %> - <%= game.date.strftime("%A, %b %d") %>
+<% end %>

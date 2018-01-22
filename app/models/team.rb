@@ -4,10 +4,10 @@ class Team < ApplicationRecord
   belongs_to :league, optional: true
   has_many :season_teams
   has_many :seasons, through: :season_teams
-  has_many :matches,
+  has_many :matches
   has_many :games, through: :matches
 
   def games_for_season(season)
-    binding.pry
+    games.where("season_id = ?", season.id)
   end
 end
