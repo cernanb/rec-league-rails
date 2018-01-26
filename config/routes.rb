@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :leagues, only: [:new, :create, :show] do
-    resources :matches, only: [:new]
+    resources :matches, only: [:new, :create]
   end
   
   resources :users, only: [:show]
