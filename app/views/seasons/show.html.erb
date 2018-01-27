@@ -1,8 +1,38 @@
-<h1><%= @season.start_date.strftime("%Y Season") %></h1>
-for 
-<%= @team.name %>
 
-<h1>Games</h1>
-<% @games.each.with_index(1) do |game, i| %>
-  <p>Game <%= i %> - <%= game.date.strftime("%A, %b %d") %>
-<% end %>
+<div class="content">
+<%= link_to "Create a new match", new_league_match_path(@league) %>
+</div>
+<div class="columns">
+
+  <div class="column is-half">
+    <div class="box" style="background-color: #3498db; color: white;">
+      <article class="media">
+        
+        <div class="media-content">
+          <div class="content">
+          <h2 class="title is-2 level-item" style="color: white">Teams</h2>
+          <% @teams.each do |team| %>
+            <p class="title is-5 level-item"><%= team.name %></p>
+          <% end %>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="column is-half">
+    <div class="box" style="background-color: #2ecc71; color: white;">
+      <article class="media">
+        
+        <div class="media-content">
+          <div class="content">
+          <h2 class="title is-2 level-item" style="color: white">Matchups</h2>
+          
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+
+</div>
