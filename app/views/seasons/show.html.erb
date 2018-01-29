@@ -1,5 +1,7 @@
 
 <div class="content">
+<h1 class="title is-1"><%= @league.name %></h1>
+<h2 class="title is-2"><%= @season.start_date.strftime("%Y") %> Season</h2>
 <%= link_to "Create a new match", new_league_match_path(@league) %>
 </div>
 <div class="columns">
@@ -26,8 +28,10 @@
         
         <div class="media-content">
           <div class="content">
-          <h2 class="title is-2 level-item" style="color: white">Matchups</h2>
-          
+          <h2 class="title is-2 level-item" style="color: white">Schedule</h2>
+          <% @weeks.each do |week| %>
+            <p class="level-item">Week <%= week.num %><p>
+          <% end %>
           </div>
         </div>
       </article>
@@ -35,4 +39,19 @@
   </div>
 
 
+</div>
+<div class="columns">
+  <div class="column is-half">
+    <div class="box" style="background-color: #3498db; color: white;">
+      <article class="media">
+        
+        <div class="media-content">
+          <div class="content">
+          <h2 class="title is-2 level-item" style="color: white">Standings</h2>
+          Placeholder for standings
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
 </div>

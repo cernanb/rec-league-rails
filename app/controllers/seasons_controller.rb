@@ -1,9 +1,10 @@
 class SeasonsController < ApplicationController
 
   def show
-    @league = Team.find(params[:league_id])
+    @league = League.find(params[:league_id])
     @season = @league.seasons.find_by(id: params[:id])
     @teams = @season.teams
+    @weeks = @season.weeks
     # @games = @team.games_for_season(@season)
   end
 
