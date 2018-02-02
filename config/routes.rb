@@ -11,7 +11,12 @@ Rails.application.routes.draw do
     resources :matches, only: [:new, :create]
     resources :seasons, only: [:show] do
       resources :weeks, only: [:show]
+      resources :games, only: [:new, :create]
     end
+  end
+
+  resources :seasons, only: [] do
+    resources :games, only: [:new, :create]
   end
   
   resources :users, only: [:show]
