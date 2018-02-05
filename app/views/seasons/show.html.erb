@@ -66,10 +66,10 @@
           <%= form_for @game, url: season_games_path(@season) do |f|  %>
             <%= f.fields_for :matches do |match_form| %>
               
-              <%= match_form.collection_select(:team_id, @teams, :id, :name) %>
+              <%= match_form.collection_select(:team_id, @teams, :id, :name, {}, {style: "color: black;"}) %>
               
             <% end %>
-            Week: <%= f.collection_select(:week_id, @season.weeks, :id, :num) %>
+            Week: <%= f.collection_select(:week_id, @season.weeks, :id, :num, {}, {style: "color: black;"}) %>
             <%= f.submit %>
           <% end %>
           </div>
