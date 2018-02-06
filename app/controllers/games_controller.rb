@@ -4,7 +4,9 @@ class GamesController < ApplicationController
     
     @week = @season.weeks.find_by(num: params[:game][:week_id])
     @game = @week.games.build(game_params)
-    @game.save
+    if !@game.same_team_opponent?
+      @game.save
+    end
     session[:return_to] ||= request.referer
     redirect_to session.delete(:return_to)
   

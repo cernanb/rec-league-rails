@@ -12,4 +12,8 @@ class Game < ApplicationRecord
       self.matches.build(team_id: team[:team_id])
     end
   end
+
+  def same_team_opponent?
+    self.matches[0].team_id == self.matches[1].team_id
+  end
 end
