@@ -31,7 +31,7 @@
           <% @weeks.each do |week| %>
             <p class="level-item">Week <%= week.num %><p>
             <% week.games.each do |game| %>
-              <%= game.matches.first.team.name %> vs <%= game.matches.last.team.name %>
+              <div class="level-item><%= game.matches.first.team.name %> vs <%= game.matches.last.team.name %></div>
             <% end %>
           <% end %>
           </div>
