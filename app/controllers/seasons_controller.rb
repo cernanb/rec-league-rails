@@ -8,7 +8,6 @@ class SeasonsController < ApplicationController
     @game = Game.new
     @game.matches.build
     @game.matches.build
-    # @games = @team.games_for_season(@season)
   end
 
 end
