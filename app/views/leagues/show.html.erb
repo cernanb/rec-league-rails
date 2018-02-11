@@ -9,7 +9,7 @@
           <div class="content">
             <h2 class="title is-2 level-item" style="color: white">Seasons</h2>
             <% @league.seasons.each do |season| %>
-              <%= link_to "#{season.start_date.strftime("%Y")} Season", league_season_path(@league, season)  %> 
+              <%= link_to "#{season.start_date.strftime("%Y")} Season", league_season_path(@league, season), class: "level-item"  %> 
             <% end %>
           </div>
         </div>
