@@ -24,7 +24,6 @@
   <div class="column is-half">
     <div class="box" style="background-color: #2ecc71; color: white;">
       <article class="media">
-        
         <div class="media-content">
           <div class="content">
           <h2 class="title is-2 level-item" style="color: white">Schedule</h2>
@@ -48,7 +47,6 @@
   <div class="column is-half">
     <div class="box" style="background-color: #3498db; color: white;">
       <article class="media">
-        
         <div class="media-content">
           <div class="content">
           <h2 class="title is-2 level-item" style="color: white">Standings</h2>
@@ -61,15 +59,12 @@
   <div class="column is-half">
     <div class="box" style="background-color: #3498db; color: white;">
       <article class="media">
-        
         <div class="media-content">
           <div class="content">
           <h2 class="title is-2 level-item" style="color: white">Game Creator</h2>
           <%= form_for @game, url: season_games_path(@season) do |f|  %>
             <%= f.fields_for :matches do |match_form| %>
-              
               <%= match_form.collection_select(:team_id, @teams, :id, :name, {}, {style: "color: black;"}) %>
-              
             <% end %>
             Week: <%= f.collection_select(:week_id, @season.weeks, :id, :num, {}, {style: "color: black;"}) %>
             <%= f.submit %>
