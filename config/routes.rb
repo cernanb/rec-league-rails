@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   resources :leagues, only: [:new, :create, :show] do
     resources :matches, only: [:new, :create]
     resources :seasons, only: [:show] do
-      resources :weeks, only: [:show]
+      get '/scoreboard', to: "seasons#scoreboard"
+      resources :weeks, only: [:show] 
       resources :games, only: [:new, :create]
     end
   end
